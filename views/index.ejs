@@ -12,14 +12,5 @@
     </div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
-<script>
-    const socket = io();
-    const input = document.getElementById('message');
-    input.addEventListener('keyup',()=>{
-        socket.emit('message',input.value);
-    })
-    socket.on('message',(msg)=>{
-        input.value = msg;
-    })
-</script>
+<script src = "/logic.js"></script>
 </html>

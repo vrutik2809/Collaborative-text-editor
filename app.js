@@ -7,6 +7,7 @@ const { Server } =  require('socket.io');
 const io = new Server(server);
 
 app.set('view engine','ejs');
+app.use(express.static('public'));
 app.use(express.json());
 
 server.listen(process.env.PORT || 3000);
